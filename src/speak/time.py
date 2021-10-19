@@ -9,7 +9,7 @@ import random
 import time
 import csv
 import os
-from utils.time import save_data_to_memory
+from src.utils.time import save_data_to_memory
 
 categories = ['hour', 'min', 'its_oclock', 'am_pm', 'teens', 'tens']
 
