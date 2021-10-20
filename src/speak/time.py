@@ -27,25 +27,28 @@ def tell_time() -> float:
 
     hour, min, am_pm = time.strftime("%I %M %p").split()
     
+    its_file = random.choice(data_map['its_oclock']['its'])
     hour_file = random.choice(data_map['hour'][spelled_hours[int(hour)]])
     min_files = parse_mins(min)
     am_pm_file = random.choice(data_map['am_pm'][am_pm.lower()])
 
     # parse min. Different times require different treatment.
     
-    concatenate_audio_files(hour_file, *min_files, am_pm_file)
+    concatenate_audio_files(its_file, hour_file, *min_files, am_pm_file)
 
 def concatenate_audio_files(*file_paths):
     """
     Concatenate audio files from their file paths
     """
-    print([f for f in file_paths])
+    
     return
 
 def parse_mins(min):
     """
     
     """
+    if int(min) == 0:
+        return
     if int(min) <= 10:
          return (random.choice(data_map['min'][spelled_hours[int(min)]]))
     elif int(min) > 10 and int(min) < 20:
