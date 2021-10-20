@@ -1,10 +1,11 @@
 
 from ..speak.time import tell_time
-from .misc import quit
+from .misc import quit, help
 
 commands_map = {
     't': tell_time,
-    'q': quit
+    'q': quit,
+    'h': help
 }
 
 
