@@ -4,7 +4,6 @@ Main module.
 
 from src.commands import commands_map
 
-
 def quit():
 
     print("Have a nice day!")
