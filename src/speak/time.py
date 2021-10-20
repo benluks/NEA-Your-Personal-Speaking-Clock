@@ -26,7 +26,6 @@ def tell_time() -> float:
     grab current time and return audio files in the proper order
     """
 
-
     hour, min, am_pm = time.strftime("%I %M %p").split()
     
     its_file = random.choice(data_map['its_oclock']['its'])
@@ -36,9 +35,9 @@ def tell_time() -> float:
 
     # parse min. Different times require different treatment.
     
-    concatenate_audio_files(its_file, hour_file, *min_files, am_pm_file)
+    play_sound_from_files(its_file, hour_file, *min_files, am_pm_file)
 
-def concatenate_audio_files(*file_paths):
+def play_sound_from_files(*file_paths):
     """
     Concatenate audio files from their file paths
     """
@@ -64,18 +63,3 @@ def parse_mins(min):
             min_files += [random.choice(data_map['min'][spelled_hours[int(min) % 10]])]
 
         return tuple(min_files)
-
-
-def grab_audio_from_time(hour: int, min: int, is_am: bool) -> None:
-    
-    # Index utterance based on class (hour/ten/min)
-    # utterance
-    base_path = 'data/audio/'
-    hour_path = base_path + '1_12/hour'
-
-    print(data_map)
-    
-
-
-    return
-
