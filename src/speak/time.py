@@ -9,13 +9,15 @@ import random
 import time
 from src.utils.time import save_data_to_memory
 
+from playsound import playsound
+
 categories = ['hour', 'min', 'its_oclock', 'am_pm', 'teens', 'tens']
+DATA_PATH = 'data/audio/'
 
 spelled_hours = ['oh', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
 spelled_teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
 spelled_tens = ['oh', 'ten', 'twenty', 'thirty', 'forty', 'fifty']
 
-am = {True: 'am', False: 'pm'}
 
 data_map = save_data_to_memory()
 
@@ -40,19 +42,20 @@ def concatenate_audio_files(*file_paths):
     """
     Concatenate audio files from their file paths
     """
+    for fp in file_paths:
+        if fp:
+            playsound(DATA_PATH + fp)
     
-    return
-
 def parse_mins(min):
     """
     
     """
     if int(min) == 0:
-        return
+        return (None,)
     if int(min) <= 10:
-         return (random.choice(data_map['min'][spelled_hours[int(min)]]))
+         return (random.choice(data_map['min'][spelled_hours[int(min)]]),)
     elif int(min) > 10 and int(min) < 20:
-        return (random.choice(data_map['teens'][spelled_teens[int(min)-10]]))
+        return (random.choice(data_map['teens'][spelled_teens[int(min)-10]]),)
     else:
         min_files = [random.choice(data_map['tens'][spelled_tens[int(min) // 10]])]
         
