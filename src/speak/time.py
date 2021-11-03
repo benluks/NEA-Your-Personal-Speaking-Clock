@@ -11,8 +11,9 @@ from src.utils.time import save_data_to_memory
 
 from playsound import playsound
 
-categories = ['hour', 'min', 'its_oclock', 'am_pm', 'teens', 'tens']
 DATA_PATH = 'data/audio/'
+
+categories = ['hour', 'min', 'its_oclock', 'am_pm', 'teens', 'tens']
 
 spelled_hours = ['oh', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
 spelled_teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
@@ -21,7 +22,7 @@ spelled_tens = ['oh', 'ten', 'twenty', 'thirty', 'forty', 'fifty']
 
 data_map = save_data_to_memory()
 
-def tell_time() -> float:
+def tell_time():
     """
     grab current time and return audio files in the proper order
     """
