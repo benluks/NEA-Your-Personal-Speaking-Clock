@@ -11,7 +11,7 @@ from src.utils.time import save_data_to_memory
 
 from playsound import playsound
 
-DATA_PATH = 'data/audio/'
+DATA_PATH = 'data/recut_recordings/'
 
 categories = ['hour', 'min', 'its_oclock', 'am_pm', 'teens', 'tens']
 
