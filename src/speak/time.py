@@ -35,7 +35,7 @@ def tell_time():
     am_pm_file = random.choice(data_map['am_pm'][am_pm.lower()])
 
     # parse min. Different times require different treatment.
-    
+    print(data_map)
     play_sound_from_files(its_file, hour_file, *min_files, am_pm_file)
 
 def play_sound_from_files(*file_paths):
