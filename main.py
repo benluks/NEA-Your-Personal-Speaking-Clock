@@ -18,9 +18,9 @@ def print_welcome_screen():
         Here are my commands:
         --------------------
         
-        time (t) | tell the current time
-        quit (q) | exit the application
-        help (h) | pull up this menu
+        time (t)       | tell the current time
+        quit (q, exit) | exit the application
+        help (h)       | pull up this menu
 
         Let me know what I can help you with!
         """

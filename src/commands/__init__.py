@@ -1,1 +1,1 @@
-from .commands import commands_map, command_switch
+from .commands import commands_map

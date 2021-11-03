@@ -1,6 +1,14 @@
 
 from ..speak.time import tell_time
-from .misc import quit, help
+
+def quit():
+
+    print("Bye!")
+    return 'quit'
+
+def help():
+
+    return 'help'
 
 commands_map = {
     
@@ -14,8 +22,3 @@ commands_map = {
     'help': help,
     'h': help
 }
-
-
-def command_switch(command_input):
-    
-    return commands_map[command_input]
