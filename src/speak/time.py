@@ -51,9 +51,15 @@ def parse_mins(min):
     """
     if int(min) == 0:
         return (None,)
-    if int(min) <= 10:
-         return (random.choice(data_map['min'][spelled_hours[int(min)]]),)
-    elif int(min) > 10 and int(min) < 20:
+    if int(min) < 10:
+        print(data_map['oh'])
+        
+        min_files = (random.choice(data_map['oh']['oh']),)
+        min_files += (random.choice(data_map['min'][spelled_hours[int(min)]]),)
+    
+        return min_files
+
+    elif int(min) >= 10 and int(min) < 20:
         return (random.choice(data_map['teens'][spelled_teens[int(min)-10]]),)
     else:
         min_files = [random.choice(data_map['tens'][spelled_tens[int(min) // 10]])]

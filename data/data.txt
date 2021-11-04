@@ -98,6 +98,9 @@ teens/59.mp3|"nineteen"|1
 teens/6.mp3|"eleven"|1
 teens/60.mp3|"nineteen"|1
 teens/61.mp3||
+teens/62.mp3|"ten"|1
+teens/63.mp3|"ten"|1
+teens/64.mp3|"ten"|1
 teens/7.mp3|"eleven"|1
 teens/8.mp3||
 teens/9.mp3|"eleven"|1
@@ -192,9 +195,6 @@ am_pm/9.mp3|"am"|1
 1_12/min/5.mp3|"one"|1
 1_12/min/51.mp3|"nine"|1
 1_12/min/53.mp3|"nine"|1
-1_12/min/55.mp3|"ten"|1
-1_12/min/57.mp3|"ten"|1
-1_12/min/59.mp3|"ten"|1
 1_12/min/61.mp3||
 1_12/min/63.mp3||
 1_12/min/65.mp3||
@@ -203,3 +203,15 @@ am_pm/9.mp3|"am"|1
 1_12/min/7.mp3|"two"|1
 1_12/min/71.mp3||
 1_12/min/9.mp3|"two"|1
+oh/0.mp3|"oh"|1
+oh/1.mp3|"oh"|1
+oh/2.mp3|"oh"|1
+oh/3.mp3|"oh"|1
+oh/4.mp3|"oh"|1
+oh/5.mp3|"oh"|1
+oh/6.mp3|"oh"|1
+oh/7.mp3|"oh"|1
+oh/8.mp3|"oh"|1
+oh/9.mp3|"oh"|1
+oh/10.mp3|"oh"|1
+oh/11.mp3|"oh"|1

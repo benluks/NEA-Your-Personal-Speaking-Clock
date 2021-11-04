@@ -7,7 +7,7 @@ This module contains utilities related to time.
 
 import csv
 
-categories = ['hour', 'min', 'its_oclock', 'am_pm', 'teens', 'tens']
+categories = ['hour', 'min', 'its_oclock', 'am_pm', 'teens', 'tens', 'oh']
 
 def save_data_to_memory():
     """
@@ -34,7 +34,7 @@ def save_data_to_memory():
         
         utts = {row[1] for row in rows_split_by_cat[i]}
         audio_file_map[categories[i]] = {utt: [row[0] for row in rows_split_by_cat[i] if row[1] == utt] for utt in utts}
-    
+
     return audio_file_map
 
 
