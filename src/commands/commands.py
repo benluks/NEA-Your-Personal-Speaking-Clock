@@ -18,6 +18,7 @@ commands_map = {
     'quit': quit,
     'q': quit,
     'exit': quit,
+    'e': quit,
     
     'help': help,
     'h': help
