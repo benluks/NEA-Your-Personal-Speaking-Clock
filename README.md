@@ -92,6 +92,12 @@ python3 gui.py
 
 ##### Local Demonstrator on the command line
 
+Or, you can download the executable NEA.exe, follow the instruction on how to make your own speech dataset, place the executable in the same directory as the `data` folder.
+
+_screenshot incoming_
+
+##### Local Demonstrator with commandline
+
 ```
 python3 main.py
 ```
