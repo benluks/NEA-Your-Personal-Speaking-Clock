@@ -1,5 +1,5 @@
 
-from ..speak.time import tell_time
+from ..speak.time import tell_time, customize_data_path
 
 def quit():
 
@@ -21,5 +21,7 @@ commands_map = {
     'e': quit,
     
     'help': help,
-    'h': help
+    'h': help,
+
+    'cdp': customize_data_path
 }

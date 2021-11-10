@@ -3,7 +3,7 @@ Main module.
 """
 
 from src.commands import commands_map
-
+from src.speak.time import DATA_PATH
 
 def print_welcome_screen():
 
@@ -18,9 +18,19 @@ def print_welcome_screen():
         Here are my commands:
         --------------------
         
+        BASICS
+        ------
         time (t)          | tell the current time
         quit (q, exit, e) | exit the application
         help (h)          | pull up this menu
+
+        CUSTOMIZATION
+        -------------
+        cdp (stands for   | By default, the path to the audio data is "data/audio/" (relative to the
+        "custom data      | root directory). If you'd like to change that, run this command
+        path")            | You'll be prompted to enter a new data path. As long as the entered
+                          | path is visible from the root directory, it will work. Note that this
+                          | command does not check whether the data is properly formatted.
 
         Let me know what I can help you with!
         """
