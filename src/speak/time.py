@@ -5,6 +5,7 @@ speak/time.py
 This module contains functions related to speaking commands
 """
 
+from os.path import isdir
 import random
 import time
 from src.utils.time import save_data_to_memory
@@ -69,3 +70,24 @@ def parse_mins(min):
             min_files += [random.choice(data_map['min'][spelled_hours[int(min) % 10]])]
 
         return tuple(min_files)
+
+def customize_data_path():
+    
+    global DATA_PATH
+
+    new_path = input(
+        f"""Your current data path is '{DATA_PATH}'. What would you like to change it to? """)
+    
+    if isdir(new_path):
+        # make sure to append slash
+        new_path += '/' if new_path[-1] != '/' else ''
+        DATA_PATH = new_path
+        print(f"Your audio data path has successfully been changed to '{DATA_PATH}'")
+    else:
+        print(
+            f"""Oops!
+                It looks like either '{new_path}' doesn't exist, or it isn't visible 
+                from the root directory. Make sure you spelled the name correctly,
+                and you considered the relative positions.
+                
+                Your audio data path is still '{DATA_PATH}'""")
