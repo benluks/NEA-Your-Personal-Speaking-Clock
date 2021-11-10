@@ -63,6 +63,7 @@ def run():
             break
         if action == 'help':
             print_welcome_screen()
+    
 
 if __name__ == '__main__':
     run()
