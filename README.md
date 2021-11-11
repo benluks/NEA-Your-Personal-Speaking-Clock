@@ -24,7 +24,8 @@ In the root directory there is a folder called `data`, containing a metadata fil
 
 #### 1. Formatting the audio data
 
-For the purposes of this explanation, we assume the bae audio folder (in the `data` folder is called '`audio`'. The fodler should be formatted as follows:
+For the purposes of this explanation, we assume the bae audio folder (in the `data` folder is called '`audio`', although you can name it whatever you want, include multiple audio files, and switch between them without restarting the application.  
+The folder should be formatted as follows:
 
 ```
 audio
