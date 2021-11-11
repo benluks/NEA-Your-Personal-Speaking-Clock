@@ -3,7 +3,7 @@ from PySimpleGUI.PySimpleGUI import T
 # from src.speak.time import tell_time
 # from sd import voice_activation
 from src.commands import commands_map
-from src.speak.time import DATA_PATH, customize_data_path
+from src.speak.time import DATA_PATH, customize_data_path, customize_data_path_gui
 
 # Define the window's theme
 sg.theme('dark grey 9')
@@ -15,7 +15,7 @@ layout = [[sg.Text("Would you like to hear the current time?")],
         #   [sg.Input(key='-INPUT-')],
         #   [sg.Text(size=(40,1), key='-OUTPUT-')],
           [sg.Button('Time'), sg.Button('Quit'),sg.Button('Help')],
-          [sg.Button(cdp)]
+          [sg.Button(cdp), sg.Button('Show Current Data Path')]
           ]
 
 # Create the window
@@ -37,9 +37,10 @@ while True:
         
     elif event == cdp:
         # sg.Popup(sg.Input(key='-INPUT-'))
-        cdp_folder = sg.popup_get_folder('Please type or browse to select a new data path folder')
-        sg.Popup('New Data Path', 'This is your new data path:', cdp_folder)
-        DATA_PATH = cdp_folder
+        cdp_folder = sg.popup_get_folder(f'Your current data path is {DATA_PATH}. Please type or browse to select a new data path folder')
+        customize_data_path_gui(cdp_folder)
+        # sg.Popup('New Data Path', 'This is your new data path:', DATA_PATH)
+        # DATA_PATH = cdp_folder
         
         
     elif event == 'Help':
@@ -47,6 +48,8 @@ while True:
     # elif event == 'Voice':
         # voice_activation()
         # sg.Popup(f"the program is listening in the background")
+    elif event == "Show Current Data Path":
+        sg.Popup(f"Your current data path is {DATA_PATH}.")
         
 # Finish up by removing from the screen
 window.close()

@@ -9,6 +9,7 @@ from os.path import isdir
 import random
 import time
 from src.utils.time import save_data_to_memory
+import PySimpleGUI as sg
 
 from playsound import playsound
 
@@ -70,7 +71,7 @@ def parse_mins(min):
 
         return tuple(min_files)
 
-def customize_data_path():
+def customize_data_path(new_path):
     
     global DATA_PATH
 
@@ -90,3 +91,20 @@ def customize_data_path():
                 and you considered the relative positions.
                 
                 Your audio data path is still '{DATA_PATH}'""")
+        
+def customize_data_path_gui(new_path):
+    global DATA_PATH
+    
+    if new_path == None:
+        sg.Popup(f"You did not select a folder, your data path is still \'{DATA_PATH}\'") 
+    
+    elif not isdir(new_path):
+        sg.Popup('Oops!', f'It looks like either {new_path} doesn\'t exist, or it isn\'t visible from the root directory. Make sure you typed/selected a valid directory.', f'Your audio data path is still \'{DATA_PATH}\' ')
+    
+    elif isdir(new_path):
+        new_path += '/' if new_path[-1] != '/' else ''
+        DATA_PATH = new_path
+        sg.Popup('New Data Path', 'You have succefully changed the data path to:', DATA_PATH)
+    # else:
+    #     sg.Popup('Oops!', f'It looks like either {new_path} doesn\'t exist, or it isn\'t visible from the root directory. Make sure you typed/selected a valid directory.', f'Your audio data path is still \'{DATA_PATH}\' ')
+    
