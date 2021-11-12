@@ -90,9 +90,9 @@ The file is in a quasi-csv format, delimited instead by '`|`' (ascii 124). The f
 python3 gui.py
 ```
 
-Linux and MacOSX users may experience a `ModuleNotFoundError: No module named '_tkinter'`. In this case, you'll have to install `python-tk` using `apt-get` (Linux) or `brew` (MacOSX).
+![gui_ico.png](gui_ico.png)
 
-_screenshot incoming_
+Linux and MacOSX users may experience a `ModuleNotFoundError: No module named '_tkinter'`. In this case, you'll have to install `python-tk` using `apt-get` (Linux) or `brew` (MacOSX).
 
 ##### Local Demonstrator with CLI
 
