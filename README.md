@@ -4,7 +4,9 @@
 
 ### 1. Clone the Repo
 
+```
 git clone https://github.com/benluks/NEA-Your-Personal-Speaking-Clock.git
+```
 
 ### 2. Install Requirements
 
