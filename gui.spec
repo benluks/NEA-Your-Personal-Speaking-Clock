@@ -2,15 +2,12 @@
 
 
 block_cipher = None
-added_files = [
-    ('src','src')
-]
 
 
 a = Analysis(['gui.py'],
              pathex=[],
              binaries=[],
-             datas=added_files,
+             datas=[],
              hiddenimports=[],
              hookspath=[],
              hooksconfig={},
@@ -37,7 +34,6 @@ exe = EXE(pyz,
           upx_exclude=[],
           runtime_tmpdir=None,
           console=False,
-          icon = 'data\\clock.ico',
           disable_windowed_traceback=False,
           target_arch=None,
           codesign_identity=None,
