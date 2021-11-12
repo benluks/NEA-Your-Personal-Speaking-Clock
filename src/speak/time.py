@@ -71,7 +71,7 @@ def parse_mins(min):
 
         return tuple(min_files)
 
-def customize_data_path(new_path):
+def customize_data_path():
     
     global DATA_PATH
 
