@@ -86,15 +86,29 @@ The file is in a quasi-csv format, delimited instead by '`|`' (ascii 124). The f
 
 ##### Local Demonstrator with GUI
 
-```
+```shell
 python3 gui.py
 ```
 
 ##### Local Demonstrator on the command line
 
-```
+```shell
 python3 main.py
 ```
+
+##### Local Demonstrator with Windows Executable
+
+You can find the windows executable```nea-gui.exe``` in the ```dist/``` directory. 
+
+**Before** you run the ```.exe``` file, please make sure the directory containing the executable also contains the data folder just like the file structure for the `.py` files.
+
+
+
+## Advanced
+
+* Change Data Path is available in both the command line version and the GUI version. Before using this function, please make sure you followed the instruction [above](adding-your-own-voice-data)!
+
+
 
 ### License
 
