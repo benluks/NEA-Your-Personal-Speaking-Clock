@@ -90,17 +90,17 @@ The file is in a quasi-csv format, delimited instead by '`|`' (ascii 124). The f
 python3 gui.py
 ```
 
-##### Local Demonstrator on the command line
-
-Or, you can download the executable NEA.exe, follow the instruction on how to make your own speech dataset, place the executable in the same directory as the `data` folder.
-
 _screenshot incoming_
 
-##### Local Demonstrator with commandline
+##### Local Demonstrator with CLI
 
 ```
 python3 main.py
 ```
+
+##### Local Demonstrator with executable (PC only)
+
+Or, you can download the executable NEA.exe, follow the instruction on how to make your own speech dataset, place the executable in the same directory as the `data` folder.
 
 ### License
 
