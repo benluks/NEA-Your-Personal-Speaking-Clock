@@ -138,3 +138,5 @@ def customize_data_path_gui(new_path):
     # else:
     #     sg.Popup('Oops!', f'It looks like either {new_path} doesn\'t exist, or it isn\'t visible from the root directory. Make sure you typed/selected a valid directory.', f'Your audio data path is still \'{DATA_PATH}\' ')
     
+def show_current_path():
+    sg.Popup(f"Your current data path is {DATA_PATH}.")

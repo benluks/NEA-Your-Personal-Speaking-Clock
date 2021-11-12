@@ -1,7 +1,7 @@
 import PySimpleGUI as sg
 try:
     from src.commands import commands_map
-    from src.speak.time import DATA_PATH, customize_data_path_gui
+    from src.speak.time import DATA_PATH, customize_data_path_gui, show_current_path
 
     
     # Define the window's theme
@@ -47,10 +47,11 @@ try:
             
             
         elif event == 'Help':
-            sg.Popup(f"By default, the path to the audio data is \"data\/audio\/\" (relative to the root directory). If you'd like to change that, run this command. You'll be prompted to enter a new data path. As long as the entered path is visible from the root directory, it will work. Note that Note that you are responsible for checking whether the data is properly formatted.")
+            sg.Popup(f"By default, the path to the audio data is \"data/audio/\" (relative to the root directory). If you'd like to change that, run this command. You'll be prompted to enter a new data path. As long as the entered path is visible from the root directory, it will work. Note that Note that you are responsible for checking whether the data is properly formatted.")
 
         elif event == "Show Current Data Path":
-            sg.Popup(f"Your current data path is {DATA_PATH}.")
+            # sg.Popup(f"Your current data path is {DATA_PATH}.")
+            show_current_path()
             
     # Finish up by removing from the screen
     window.close()
