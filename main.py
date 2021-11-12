@@ -41,12 +41,17 @@ def prompt_command():
     """
     Prompt user for command.
     """
-
-    command_input = input("How can I help you? ")
-    command = commands_map[command_input]
-    action = command()
     
-    return action
+    command_input = input("How can I help you? ")
+
+    try:
+        command = commands_map[command_input]
+        action = command()
+        
+        return action
+    
+    except KeyError:
+        print(f"Oops! It looks like '{command_input}' isn't a command. Pull up the manual with 'help' (h) if you need a refresher.")
 
 def run():
     """

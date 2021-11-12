@@ -76,7 +76,8 @@ def customize_data_path(new_path):
     global DATA_PATH
 
     new_path = input(
-        f"""Your current data path is '{DATA_PATH}'. What would you like to change it to? """)
+        f"""Your current data path is '{DATA_PATH}'. What would you like to change it to? """
+        )
     
     if isdir(new_path):
         # make sure to append slash
