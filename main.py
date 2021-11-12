@@ -24,6 +24,8 @@ def print_welcome_screen():
         quit (q, exit, e) | exit the application
         help (h)          | pull up this menu
 
+        customtime (ct)   | play a custom time (you will be prompted upon entering the command)
+
         CUSTOMIZATION
         -------------
         cdp (stands for   | By default, the path to the audio data is "data/audio/" (relative to the

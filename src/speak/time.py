@@ -24,13 +24,16 @@ spelled_tens = ['oh', 'ten', 'twenty', 'thirty', 'forty', 'fifty']
 
 data_map = save_data_to_memory()
 
-def tell_time():
+def tell_time(*args):
     """
     grab current time and return audio files in the proper order
     """
-
-    hour, min, am_pm = time.strftime("%I %M %p").split()
     
+    if not args:
+        hour, min, am_pm = time.strftime("%I %M %p").split()
+    else:
+        hour, min, am_pm = args
+
     its_file = random.choice(data_map['its_oclock']['its'])
     hour_file = random.choice(data_map['hour'][spelled_hours[int(hour)]])
     min_files = parse_mins(min)
@@ -38,6 +41,32 @@ def tell_time():
 
     # parse min. Different times require different treatment.
     play_sound_from_files(its_file, hour_file, *min_files, am_pm_file)
+
+def custom_time():
+
+    print('What time would you like to hear?')
+    
+   
+    error_statement = "hours and minutes must be integers from 1-12 and 0-59, respectively."
+    
+    hours = input('hour (1-12): ')
+    try:
+        while int(hours) not in range(1,13):
+            hours = input('hour (1-12): ')
+
+        min = input('minute (0-59): ')
+        while int(min) not in range(60):
+            min = input('minute (0-59): ')
+    
+    except ValueError:
+        print(error_statement)
+
+    am_pm = input("am or pm? ")
+    while am_pm not in ('am', 'pm'):
+        am_pm = input("Please enter 'am' or 'pm' ")
+    
+    tell_time(hours, min, am_pm)
+
 
 def play_sound_from_files(*file_paths):
     """
