@@ -31,7 +31,11 @@ while True:
     elif event == 'Time':
         # tell_time()
         command = commands_map['t']
-        command()
+        try:
+            command()
+        except:
+            sg.Popup(f"The program cannot find the required audio data and metadata file in {DATA_PATH}")
+
         # sg.PopupTimed(action,title = 'The current time is')
         # sg.Popup(f'this is the current time')
         
