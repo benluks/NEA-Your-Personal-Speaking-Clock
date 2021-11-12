@@ -1,5 +1,4 @@
 import PySimpleGUI as sg
-
 try:
     from src.commands import commands_map
     from src.speak.time import DATA_PATH, customize_data_path_gui
