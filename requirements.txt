@@ -1,2 +1,2 @@
 playsound==1.2.2
-PySimpleGUI
+PySimpleGUI==4.55.1
